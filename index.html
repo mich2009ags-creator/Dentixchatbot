@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dentix Chatbot</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Botão flutuante -->
+    <button id="chatToggle" class="chat-toggle">
+        <i class="fas fa-comment-medical"></i>
+    </button>
+
+    <!-- Chat -->
+    <div class="chat-container" id="chatContainer">
+
+        <!-- Cabeçalho -->
+        <div class="chat-header">
+
+            <div class="avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+
+            <div class="header-info">
+                <h2>
+                    Dentix
+                    <i class="fas fa-crown"></i>
+                </h2>
+
+                <div class="status">
+                    <i class="fas fa-circle"></i>
+                    <span>Ativo • IA</span>
+                </div>
+            </div>
+
+            <button id="closeChat" class="close-btn">
+                <i class="fas fa-times"></i>
+            </button>
+
+        </div>
+
+        <!-- Mensagens -->
+        <div class="chat-messages" id="chatMessages">
+
+            <div class="message bot">
+                Olá! 👋<br><br>
+                Sou o <strong>Dentix</strong>, assistente virtual da clínica odontológica. 🦷<br><br>
+                Como posso ajudar você hoje?
+            </div>
+
+        </div>
+
+        <!-- Digitando -->
+        <div id="typingArea" style="display:none;">
+            <div class="typing-indicator">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="typing-text">Dentix está digitando...</span>
+            </div>
+        </div>
+
+        <!-- Entrada -->
+        <div class="chat-input">
+            <input
+                type="text"
+                id="userInput"
+                placeholder="Digite sua dúvida..."
+                autofocus>
+
+            <button id="sendBtn">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Configuração da API Gemini -->
+    <script>
+        const GEMINI_API_KEY = "";
+        const GEMINI_API_URL = "";
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
